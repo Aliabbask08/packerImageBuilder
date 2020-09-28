@@ -20,14 +20,14 @@ pipeline {
 }
    stage("Repo_clone"){
       //Clone repo from GitHub
-      checkout ([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[credentialsId: '', url: '']]]) 
+      checkout ([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[credentialsId: '', url: 'git@github.com:Aliabbask08/packerImageBuilder.git']]]) 
 
 }
   stage("Static_Analysis"){
     //validation of packer
      steps{
          script{
-             sh "packer validate"
+             sh "packer validate -var \"profile=${AWS_PROFILE}\""
 }
 }
 }
@@ -35,7 +35,7 @@ pipeline {
    //Run packer script to build image
     steps{
         script{
-           sh "packer build"
+           sh "packer build -var \"profile=${AWS_PROFILE}\""
 
 }
 }
