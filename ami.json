@@ -43,8 +43,7 @@
             "sudo apt-get update -y",
             "sudo apt-get install nginx -y",
             "sudo systemctl start nginx",
-            "sudo systemctl enable nginx",
-            "sudo "echo 'Hello Packer world'" > /var/www/html/index.html"
+            "sudo systemctl enable nginx"
       ]
     }
   ]
