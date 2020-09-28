@@ -6,7 +6,7 @@
         "source_ami_filter": {
             "filters": {
                 "virtualization-type": "hvm",
-                "name": "",
+                "name": "{{user `ami_name`}}",
                 "root-device-type": "ebs"
             },
             "owners": "{{user `owners`}}",
@@ -26,7 +26,7 @@
                "Env": "{{user `Env`}}"
         },
         "run_tags": {
-               "Name": "{{user `ami_name`}}"
+               "Name": "{{user `Name`}}"
        }
     }],
     "_comment": "Welcome to packer world",
@@ -34,7 +34,11 @@
     {
         "type": "shell",
         "inline": [
-            ""
+            "sudo apt-get update -y"
+            "sudo apt-get install nginx -y"
+            "sudo systemctl start nginx"
+            "sudo systemctl enable nginx"
+            "echo 'Hello Packer world' > /var/www/html/index.html"
       ]
     }
   ]

@@ -1,11 +1,12 @@
 {
    "region": "",
    "profile": "",
-   "ssh_username": "ec2-user",
+   "ssh_username": "ubuntu",
+   "owners": "091171274339"
    "instance_type": "t2.micro",
    "device_name": "",
-   "ami_name": "Packer_asg_v1",
+   "ami_name": "ami-0cda377a1b884a1bc",
    "Env": "Dev",
-   "Name": "",
+   "Name": "MyAsg_image_v1",
    "snap_id": ""
 }
