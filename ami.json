@@ -6,7 +6,7 @@
         "source_ami_filter": {
             "filters": {
                 "virtualization-type": "hvm",
-                "name": "ami-0cda377a1b884a1bc",
+                "name": "ubuntu-bionic-18.04-amd64-server-20200908",
                 "root-device-type": "ebs"
             },
             "owners": "{{user `owner`}}",
