@@ -21,7 +21,7 @@ pipeline {
 }
 }
 }  
-    stage("Workspace_cleanup){
+     stage("Workspace_cleanup){
         //Cleaning WorkSpace
         steps{
             step([$class: 'WsCleanup'])
