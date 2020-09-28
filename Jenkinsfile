@@ -8,7 +8,8 @@ pipeline {
      stage ("Pre-Install"){
         steps {
             script{
-               sh "sudo yum install figlet -y"
+             
+               sh "sudo yum install cowsay -y"
 
 }
 }
@@ -17,7 +18,7 @@ pipeline {
          steps{
             //Welcome message
             script{
-               sh "figlet 'Welcome to Jenkins'"
+               sh "cowsay 'Welcome to Jenkins'"
 }
 }
 }  
