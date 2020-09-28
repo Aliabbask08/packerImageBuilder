@@ -16,11 +16,11 @@
         "ssh_username": "{{user `ssh_username`}}",
         "ami_name": "{{user `ami_name`}}",
         "force_deregister": true,
-        "ami_block_device_mappings": [
-         {
-            "device_name": "{{user `device_name`}}",
-            "snapshot_id": "{{user `snap_id`}}"
-         }],
+        //"ami_block_device_mappings": [
+         //{
+            //"device_name": "{{user `device_name`}}",
+            //"snapshot_id": "{{user `snap_id`}}"
+         //}],
          "tags": {
                "Name": "{{user `Name`}}",
                "Env": "{{user `Env`}}"

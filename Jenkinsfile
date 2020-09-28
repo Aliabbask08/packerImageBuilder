@@ -2,7 +2,8 @@ pipeline {
    agent any
    environment{
          AWS_REGION="ap-south-1"
-         AWS_PROFILE="myprofile"     
+         AWS_PROFILE="packer"  
+         CONFIG_FILE="ami.json"   
 }
    stages {
      stage ("Pre-Install"){
@@ -18,7 +19,7 @@ pipeline {
          steps{
             //Welcome message
             script{
-               sh "cowsay 'Welcome to Jenkins'"
+               sh "cowsay 'Welcome to Packer'"
 }
 }
 }  
@@ -39,8 +40,8 @@ pipeline {
     //validation of packer
      steps{
          script{
-             //sh "packer validate -var \"profile=${AWS_PROFILE}\""
-               sh "echo 'This is static Analysis'"
+               sh "echo 'This is static Analysis'"  
+               sh "packer validate -var \"profile=${AWS_PROFILE}\""
 }
 }
 }
@@ -48,9 +49,9 @@ pipeline {
    //Run packer script to build image
     steps{
         script{
-           //sh "packer build -var \"profile=${AWS_PROFILE}\""
             sh "echo 'This is build stage'"
-
+	    sh "packer build "${CONFIG_FILE}" -var \"profile=${AWS_PROFILE}\""
+           
 }
 }
 }
