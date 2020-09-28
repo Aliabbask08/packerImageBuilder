@@ -1,8 +1,8 @@
 pipeline {
    agent any
    environment{
-         AWS_REGION=""
-         AWS_PROFILE=""     
+         AWS_REGION="ap-south-1"
+         AWS_PROFILE="myprofile"     
 }
    stages {
      stage("Opening"){
