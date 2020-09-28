@@ -2,7 +2,7 @@
    "region": "",
    "profile": "",
    "ssh_username": "ubuntu",
-   "owners": "091171274339"
+   "owners": "091171274339",
    "instance_type": "t2.micro",
    "device_name": "",
    "ami_name": "ami-0cda377a1b884a1bc",
