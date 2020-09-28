@@ -41,7 +41,7 @@ pipeline {
      steps{
          script{
                sh "echo 'This is static Analysis'"  
-               sh "packer validate -var \"profile=${AWS_PROFILE}\""
+               sh "packer validate "${CONFIG_FILE}" -var \"profile=${AWS_PROFILE}\""
 }
 }
 }
