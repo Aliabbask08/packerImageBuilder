@@ -9,18 +9,13 @@
                 "name": "{{user `ami_name`}}",
                 "root-device-type": "ebs"
             },
-            "owners": "{{user `owners`}}",
+            "owners": "{{user `owner`}}",
             "most_recent": true
         },
         "instance_type": "{{user `instance_type`}}",
         "ssh_username": "{{user `ssh_username`}}",
-        "ami_name": "{{user `ami_name`}}",
+        "ami_name": "{{user `name_ami`}}",
         "force_deregister": true,
-        //"ami_block_device_mappings": [
-         //{
-            //"device_name": "{{user `device_name`}}",
-            //"snapshot_id": "{{user `snap_id`}}"
-         //}],
          "tags": {
                "Name": "{{user `Name`}}",
                "Env": "{{user `Env`}}"
@@ -34,10 +29,10 @@
     {
         "type": "shell",
         "inline": [
-            "sudo apt-get update -y"
-            "sudo apt-get install nginx -y"
-            "sudo systemctl start nginx"
-            "sudo systemctl enable nginx"
+            "sudo apt-get update -y",
+            "sudo apt-get install nginx -y",
+            "sudo systemctl start nginx",
+            "sudo systemctl enable nginx",
             "echo 'Hello Packer world' > /var/www/html/index.html"
       ]
     }
