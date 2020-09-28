@@ -4,7 +4,7 @@
    "region": "ap-south-1",
    "profile": "",
    "ssh_username": "ubuntu",
-   "owners": "099720109477",
+   "owners": "285398391915",
    "instance_type": "t2.micro",
    "ami_name": "Testami",
    "Env": "Dev",
@@ -17,7 +17,7 @@
         "source_ami_filter": {
             "filters": {
                 "virtualization-type": "hvm",
-                "name": "ubuntu-bionic-18.04-amd64-server-20200908",
+                "name": "ami-ubuntu-16.04-1.10.3-00-1526923973",
                 "root-device-type": "ebs"
             },
             "owners": "{{user `owners`}}",
