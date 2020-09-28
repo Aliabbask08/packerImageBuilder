@@ -14,7 +14,7 @@
         },
         "instance_type": "{{user `instance_type`}}",
         "ssh_username": "{{user `ssh_username`}}",
-        "ami_name": "{{user `name_ami`}}",
+        "ami_name": "{{user `ami_name`}}",
         "force_deregister": true,
          "tags": {
                "Name": "{{user `Name`}}",

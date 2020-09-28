@@ -1,10 +1,10 @@
 {
    "region": "ap-south-1",
    "profile": "",
-   "ssh_username": "ubuntu",
+   "ssh_username": "root",
    "owner": "091171274339",
    "instance_type": "t2.micro",
-   "name_ami": "Testami"
+   "ami_name": "Testami",
    "Env": "Dev",
    "Name": "MyAsg_image_v1",
 }
