@@ -1,0 +1,11 @@
+{
+   "region": "",
+   "aws_access_key": "",
+   "aws_secret_key": "",
+   "ssh_username": "ec2-user",
+   "instance_type": "t2.micro",
+   "device_name": "",
+   "ami_name": "Packer_asg_v1",
+   "Env": "Dev",
+   "snap_id": ""
+}
