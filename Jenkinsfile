@@ -29,14 +29,15 @@ pipeline {
 }
    stage("Repo_clone"){
       //Clone repo from GitHub
-      checkout ([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[credentialsId: '', url: 'git@github.com:Aliabbask08/packerImageBuilder.git']]]) 
+      checkout ([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[credentialsId: 'Jenkins_id', url: 'git@github.com:Aliabbask08/packerImageBuilder.git']]]) 
 
 }
   stage("Static_Analysis"){
     //validation of packer
      steps{
          script{
-             sh "packer validate -var \"profile=${AWS_PROFILE}\""
+             //sh "packer validate -var \"profile=${AWS_PROFILE}\""
+               sh "echo "This is static Analysis"
 }
 }
 }
@@ -44,7 +45,8 @@ pipeline {
    //Run packer script to build image
     steps{
         script{
-           sh "packer build -var \"profile=${AWS_PROFILE}\""
+           //sh "packer build -var \"profile=${AWS_PROFILE}\""
+            sh "echo "This is build stage""
 
 }
 }
@@ -53,8 +55,8 @@ pipeline {
    //Check AMI in AWS account
      steps{
          script{
-            sh "aws ami describe --region "${AWS_REGION}"}"
-
+            //sh "aws ami describe --region "${AWS_REGION}"}"
+              sh "echo "This is test stage""
 }
 }
 }
