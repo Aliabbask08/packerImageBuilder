@@ -5,11 +5,20 @@ pipeline {
          AWS_PROFILE="myprofile"     
 }
    stages {
+     stage ("Pre-Install"){
+        steps {
+            script{
+               sh "sudo yum install figlet -y"
+
+}
+}
+}
      stage("Opening"){
          steps{
             //Welcome message
-            figlet "Welcome to Jenkins"
-
+            script{
+               sh "figlet "Welcome to Jenkins""
+}
 }
 }  
     stage("Workspace_cleanup){
