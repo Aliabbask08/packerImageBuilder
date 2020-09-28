@@ -1,4 +1,15 @@
 {
+   "variables": {
+
+   "region": "ap-south-1",
+   "profile": "",
+   "ssh_username": "ubuntu",
+   "owners": "099720109477",
+   "instance_type": "t2.micro",
+   "ami_name": "Testami",
+   "Env": "Dev",
+   "Name": "MyAsg_image_v1"
+},
     "builders": [{
         "type": "amazon-ebs",
         "profile": "{{user `profile`}}",
@@ -9,7 +20,7 @@
                 "name": "ubuntu-bionic-18.04-amd64-server-20200908",
                 "root-device-type": "ebs"
             },
-            "owners": "{{user `owner`}}",
+            "owners": "{{user `owners`}}",
             "most_recent": true
         },
         "instance_type": "{{user `instance_type`}}",

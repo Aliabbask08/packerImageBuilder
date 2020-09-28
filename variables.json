@@ -1,8 +1,9 @@
-{
+"variables": {
+   
    "region": "ap-south-1",
    "profile": "",
-   "ssh_username": "root",
-   "owner": "091171274339",
+   "ssh_username": "ubuntu",
+   "owners": "099720109477",
    "instance_type": "t2.micro",
    "ami_name": "Testami",
    "Env": "Dev",
