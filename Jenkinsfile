@@ -17,7 +17,7 @@ pipeline {
          steps{
             //Welcome message
             script{
-               sh "figlet "Welcome to Jenkins""
+               sh "figlet 'Welcome to Jenkins'"
 }
 }
 }  
@@ -37,7 +37,7 @@ pipeline {
      steps{
          script{
              //sh "packer validate -var \"profile=${AWS_PROFILE}\""
-               sh "echo "This is static Analysis""
+               sh "echo 'This is static Analysis'"
 }
 }
 }
@@ -46,7 +46,7 @@ pipeline {
     steps{
         script{
            //sh "packer build -var \"profile=${AWS_PROFILE}\""
-            sh "echo "This is build stage""
+            sh "echo 'This is build stage'"
 
 }
 }
@@ -56,7 +56,7 @@ pipeline {
      steps{
          script{
             //sh "aws ami describe --region "${AWS_REGION}"}"
-              sh "echo "This is test stage""
+              sh "echo 'This is test stage'"
 }
 }
 }
