@@ -29,8 +29,10 @@ pipeline {
 }
    stage("Repo_clone"){
       //Clone repo from GitHub
-      checkout ([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[credentialsId: 'Jenkins_id', url: 'git@github.com:Aliabbask08/packerImageBuilder.git']]]) 
+      steps {
+         checkout ([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[credentialsId: 'Jenkins_id', url: 'git@github.com:Aliabbask08/packerImageBuilder.git']]]) 
 
+}
 }
   stage("Static_Analysis"){
     //validation of packer
