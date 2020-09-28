@@ -40,8 +40,10 @@ pipeline {
     //validation of packer
      steps{
          script{
-               sh "echo 'This is static Analysis'"  
-               sh "packer validate ${CONFIG_FILE} -var \"profile=${AWS_PROFILE}\""
+               sh '''
+                    echo "This is static Analysis"  
+                    sudo packer validate ${CONFIG_FILE} -var \"profile=${AWS_PROFILE}\"
+'''
 }
 }
 }
@@ -49,9 +51,10 @@ pipeline {
    //Run packer script to build image
     steps{
         script{
-            sh "echo 'This is build stage'"
-	    sh "packer build ${CONFIG_FILE} -var \"profile=${AWS_PROFILE}\""
-           
+          sh '''
+                 echo "This is build stage"
+	         sudo packer build ${CONFIG_FILE} -var \"profile=${AWS_PROFILE}\"        
+'''
 }
 }
 }

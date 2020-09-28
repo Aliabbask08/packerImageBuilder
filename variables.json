@@ -4,7 +4,6 @@
    "ssh_username": "ubuntu",
    "owner": "091171274339",
    "instance_type": "t2.micro",
-   "ami_name": "ami-0cda377a1b884a1bc",
    "name_ami": "Testami"
    "Env": "Dev",
    "Name": "MyAsg_image_v1",
