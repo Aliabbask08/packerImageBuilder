@@ -1,6 +1,6 @@
 {
    "variables": {
-
+   "profile": "packer",
    "ssh_username": "ubuntu",
    "owners": "285398391915",
    "instance_type": "t2.micro",
@@ -10,6 +10,7 @@
 },
     "builders": [{
         "type": "amazon-ebs",
+        "profile": "{{user `profile`}}",
         "aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
         "aws_secret_key": "{{env `AWS_SECRET_SECRET_KEY`}}",
         "region": "{{env `REGION`}}",
