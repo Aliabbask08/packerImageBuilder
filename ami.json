@@ -1,8 +1,6 @@
 {
    "variables": {
 
-   "region": "ap-south-1",
-   "profile": "packer",
    "ssh_username": "ubuntu",
    "owners": "285398391915",
    "instance_type": "t2.micro",
@@ -12,8 +10,9 @@
 },
     "builders": [{
         "type": "amazon-ebs",
-        "profile": "{{user `profile`}}",
-        "region": "{{user `region`}}",
+        "aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
+        "aws_secret_key": "{{env `AWS_SECRET_KEY_ID`}}",
+        "region": "{{env `REGION`}}",
         "source_ami_filter": {
             "filters": {
                 "virtualization-type": "hvm",
