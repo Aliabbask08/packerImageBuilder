@@ -42,7 +42,7 @@ pipeline {
          script{
                sh '''
                     echo "This is static Analysis"  
-                    sudo packer validate -var="profile=packer"
+                    sudo packer validate 
 '''
 }
 }
