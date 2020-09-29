@@ -42,7 +42,8 @@ pipeline {
          script{
                sh '''
                     echo "This is static Analysis"  
-                    sudo packer validate -var \"profile=${AWS_PROFILE}\" ${CONFIG_FILE}
+                    sudo packer validate ${CONFIG_FILE}
+                    //sudo packer validate -var \"profile=${AWS_PROFILE}\" ${CONFIG_FILE}
 '''
 }
 }
@@ -53,7 +54,8 @@ pipeline {
         script{
           sh '''
                  echo "This is build stage"
-	         sudo packer build -var \"profile=${AWS_PROFILE}\" ${CONFIG_FILE}       
+	         sudo packer build ${CONFIG_FILE}       
+	         //sudo packer build -var \"profile=${AWS_PROFILE}\" ${CONFIG_FILE}       
 '''
 }
 }

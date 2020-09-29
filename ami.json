@@ -2,7 +2,7 @@
    "variables": {
 
    "region": "ap-south-1",
-   "profile": "",
+   "profile": "packer",
    "ssh_username": "ubuntu",
    "owners": "285398391915",
    "instance_type": "t2.micro",
