@@ -11,7 +11,7 @@
     "builders": [{
         "type": "amazon-ebs",
         "aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
-        "aws_secret_key": "{{env `AWS_SECRET_KEY_ID`}}",
+        "aws_secret_key": "{{env `AWS_SECRET_SECRET_KEY`}}",
         "region": "{{env `REGION`}}",
         "source_ami_filter": {
             "filters": {
