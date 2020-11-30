@@ -6,6 +6,6 @@
    "owners": "099720109477",
    "instance_type": "t2.micro",
    "ami_name": "Testami",
-   "Env": "Dev",
+   "Env": "Stage",
    "Name": "MyAsg_image_v1",
 }

@@ -41,6 +41,7 @@
             "sudo apt-get install nginx -y",
             "sudo systemctl start nginx",
             "sudo systemctl enable nginx"
+            "https://play.google.com/console/u/0/developers/4956554332715476672/app/4973479856322346147/app-dashboard?timespan=thirtyDays"
       ]
     }
   ]
